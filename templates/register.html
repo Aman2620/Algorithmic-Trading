@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent clearfix">
+        <div class="bg-illustration">
+    
+          <div class="burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    
+        </div>
+        
+        <div class="login">
+          <div class="container">
+            <h1>Register yourself</h1>
+        
+            <div class="login-form">
+              <form method = 'post'>
+                {% csrf_token %}
+                <input type="text" name='name' id='name' placeholder="Full Name" required>
+                <input type="email" name='email' id='email' placeholder="E-mail Address" required>
+                <input type="password" name='password' id='password' placeholder="Password" required>
+
+               <a href="login" class=""><button type="submit" style="cursor:pointer;">Register</button></a> 
+    
+              </form>
+            </div>
+        
+          </div>
+          </div>
+      </div>
+  </body>
+</html>
